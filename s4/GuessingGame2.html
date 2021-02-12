@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title>Guessing Game by Professor Payne
+  </title>
+  <script>
+  var number = Math.floor(Math.random() * 100 + 1);
+
+  function newGame(){
+    number = Math.floor(Math.random() * 100 + 1);
+    document.getElementById("guess").focus();
+    document.getElementById("guess").select();
+  }
+  function checkGuess(){
+    var guess = document.getElementById("guess").value;
+    var msg = "";
+    if (guess > number)
+      msg = guess + " was too high. Try again.";
+    else if (guess < number)
+      msg = guess + " was too low. Try again.";
+    else {
+      msg = guess + " was the number! You win!";
+      msg = msg + " Try a new game :).";
+      newGame();
+    }
+    var output = document.getElementById("output");
+    output.innerHTML = msg;
+    document.getElementById("guess").focus();
+    document.getElementById("guess").select();
+  }
+  </script>
+</head>
+<body onload="newGame()" >
+  <h1> Bryson's Guessing Game </h1>
+  <form onsubmit="checkGuess(); return false;">
+    Enter a number between 1 and 100:
+    <input type="text" id="guess" size="5" >
+    <button type="button" onclick="checkGuess()"> Guess! </button>
+  </form>
+  <h3 id="output">Guess a number and press the button.</h3>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>My SayMyName Web Page </title>
+  <script>
+  function sayMyName() {
+    var name = prompt("What is your name?");
+    var num = prompt("How many times should I write your name?");
+    for ( var n = 1; n <= num ; n++ ) {
+      document.write( name + " ");
+    }
+  }
+</script>
+</head>
+<body>
+  <h1>Bryson's SayMyName Web Page </h1>
+  <h3>I'm not just learning JavaScript, I'm also learning some HTML!</h3>
+  <p> I can even mix JavaScript programs into my HTML pages -
+    click the button below to see one of my JavaScript programs!</p>
+    <button onclick="sayMyName()">Click to see my SayMyName program!</button>
+  </body>
+  </html>

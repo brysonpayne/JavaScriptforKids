@@ -1,0 +1,40 @@
+
+<!-- saved from url=(0067)file:///Users/bpayne/Documents/JavaScript%20for%20Kids/Savings.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Funny Story Time with Professor Payne</title>
+  <script>
+  function generateStory() {
+    var animal =  document.getElementById("animal").value  ;
+    var adj    =  document.getElementById("adj").value  ;
+    var verb   =  document.getElementById("verb").value  ;
+    var story = "There once was a " + adj + " knight who encountered a<br>" +
+    "mighty " + animal + ". The knight drew his sword and<br>" +
+    "began to "+ verb +". And they all lived happily ever after.<br>The End.";
+    document.getElementById("output").innerHTML = story;
+
+  }
+  </script>
+</head>
+<body bgcolor="#aaffaa">
+  <h1>Bryson's Funny Story App</h1>
+  <form>
+    <table>
+      <tbody><tr>
+        <td>Enter an animal: </td>
+        <td><input type="text" id="animal"></td>
+      </tr>
+      <tr>
+        <td>Enter an adjective: </td>
+        <td><input type="text" id="adj"></td>
+      </tr>
+      <tr>
+        <td>Enter a verb: </td>
+        <td><input type="text" id="verb"></td>
+      </tr>
+    </tbody></table>
+  </form>
+    <button type="button" onclick="generateStory()">Click to create a funny story!</button>
+    <h3 id="output">There once was a smelly knight who encountered a<br>might bunny rabbit. The knight drew his sword and<br>began to scream. And they all lived happily ever after.<br>The End.</h3>
+
+
+</body></html>
